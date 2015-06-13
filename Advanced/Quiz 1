@@ -1,0 +1,39 @@
+Ex1:
+system will throw up an error, because it doesn't know the greeting variable. It was used only in a if block which has no scope outside of itself.
+
+Ex2:
+{a=>"hi there"}
+
+Ex3:
+A)
+one is: one
+two is: two
+three is: three
+B)
+one is: one
+two is: two
+three is: three
+C)
+one is: two
+two is: three
+three is: one
+
+Ex4:
+def get_UUID
+  rand = Random.new()
+  s = ""
+  32.times {s += ((rand.rand) * (10**10) % 16).floor.to_s(16) }
+  [8,13,18,23].each { |value| s.insert(value, "-") }
+  s
+end
+
+Ex5:
+def dot_separated_ip_address?(input_string)
+  dot_separated_words = input_string.split(".")
+  return false if dot_separted_words.size != 4
+  while dot_separated_words.size > 0 do
+    word = dot_separated_words.pop
+    return false if !is_a_number?(word)
+  end
+  true
+end

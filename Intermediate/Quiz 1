@@ -1,0 +1,62 @@
+Ex1:
+10.times { |i| puts (" " * i) + "The Flintstones Rock!" }
+
+Ex2:
+ans = {}
+statement.each { |letter| ans[letter] = statement.count(letter) }
+ans.uniq!
+
+Ex3:
+You're trying to add a string and an integer together which won't work. You could change (40 + 2) to (40 + 2).to_s to convert it to a string type so the add operation is successful.
+
+Ex4:
+[3,4]
+the shift(1) command lops off the 1st value of the array while in the for loop
+the pop(1) takes one off the end
+[1,2]
+
+Ex5:
+Before the 'begin' line add a conditon to catch if number <= 0, we can return with a -1 to indicate failure.
+> return -1 if number <= 0
+b1:
+checks whether the number is equally divisible by dividend
+b2:
+that tells the method to return that value because ruby returns the last line of a method implicitly
+
+Ex6:
+Yes, in a sense rolling_buffer1 "mutates the caller" in this case buffer, while rolling_buffer2 doesn't alter input_array. I would call these methods "rolling_buffer" and "rolling_buffer!" to use common ruby vernacular
+
+Ex7:
+limit exists outside the scope of the fib method. My method would look like this:
+def fib(first_num, second_num, limit)
+  return second_num if (first_num + second_num >= limit)
+  fib(second_num, first_num+second_num, limit)
+end
+
+Ex8:
+def titleize (string)
+  #break string up into an array of strings
+  #call String#capitalize! on all elements
+  #piece array back together with spaces included
+  words = string.split
+  string = ""
+  words.each { |word| string += word.capitalize!.concat(" ") }
+  string.strip!
+end
+
+Ex9:
+def munsters_age_group (hsh)
+  hsh.each do |k,v|
+    case v["age"]
+      when 0..17
+        v["age_group"] = "kid"
+      when 18..64
+        v["age_group"] = "adult"
+      when 65..9999
+        v["age_group"] = "senior"
+      else
+        v["age_group"] = "unknown"
+    end
+  end
+hsh
+end

@@ -1,0 +1,33 @@
+Ex1:
+def munsters_total_age (hsh)
+  total = 0
+  hsh.each { |name, details| total += details["age"] if details["gender"] == "male"}
+  total
+end
+
+Ex2:
+def print_munster_details (hsh)
+  hsh.each { |name, details| puts "#{name} is a #{details["age"]} year old #{details["gender"]}." }
+end
+
+Ex3:
+modify the method so that the "array part" isn't a "mutating" code then reassign the variables so that its explicit that the vars change according to the assignment operator:
+an_array_param += ["rutabega"]
+.
+.
+an_array_param = tricky_method(an_array_param)
+
+Ex4:
+sentence.split.reverse.join(' ')
+
+Ex5:
+34
+
+Ex6:
+The data is changed.
+
+Ex7:
+"paper"
+
+Ex8:
+"no"

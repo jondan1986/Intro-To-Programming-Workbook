@@ -1,0 +1,16 @@
+Ex1:
+1
+2
+2
+3
+
+Ex2: the ! describes either a "not" operation in boolean or is a common addition to methods that "mutate the caller". The ? is a ternary operator that evaluate one-line logic statements. It is also used on the end of methods that evaluate to true or false.
+  1. Not Equal to, in conditional or boolean statements
+  2. changes the boolean outcome true->false or false->true
+  3. commonly indicates the method "mutates the caller"
+  4. indicates use of a ternary operation
+  5. commonly used after methods to evaluated to true or false
+  6. turns object into a boolean
+  
+Ex3: 
+advice.gsub!("important","urgent")

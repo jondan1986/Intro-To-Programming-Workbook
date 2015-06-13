@@ -1,0 +1,25 @@
+Ex1:
+flintstone = %w(Fred Barney Wilma Betty BamBam Pebbles)
+
+Ex2:
+flintstones << "Dino"
+
+Ex3:
+flintstones.concat(%w(Dino Hoppy))
+
+Ex4:
+advice.slice!(0, advice.index("house"))
+
+Ex5:
+statement.split(//).count('t')
+
+Ex6:
+title = "Flintstone Family Members"
+extra_space = 40 - title.length
+space_string = ""
+extra_space.times {space_string += " "}
+title = space_string.insert(extra_space/2,title)
+
+OR
+
+title.center(40)
